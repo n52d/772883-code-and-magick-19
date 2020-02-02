@@ -59,7 +59,7 @@
     Пендальф Синий.
     Вместе с ним вас ждет увлекательное приключение&hellip;
   </p>
-
+  <canvas id="canvas"></canvas>
   <div class="demo"></div>
 
   <div class="setup-open">
@@ -180,8 +180,35 @@
     <p class="setup-similar-label">Петр Петров</p>
   </div>
 </template>
+<script>
+  var fireballSize = 22;
+  var getFireballSpeed = function (left) {
+    var fireballSpeed;
+    if (left) {
+      fireballSpeed = 5;
+    }
+    else {
+      fireballSpeed = 2;
+    }
+    return fireballSpeed;
+  }
+  var wizardSpeed = 3;
+  var wizardWidth = 70;
+  var getWizardHeight = function () {
+    return wizardWidth *  1.337;;
+  }
+  function getWizardX(width) {
+    var wizardX = (width * 0.5) - (wizardWidth * 0.5);
+    return wizardX;
+  }
+  function getWizardY(height) {
+    var wizardY = height / 3 ;
+    return wizardY;
+  }
 
+</script>
 <script src="js/game.js"></script>
+<script src="js/stat.js"></script>
 
 </body>
 </html>
